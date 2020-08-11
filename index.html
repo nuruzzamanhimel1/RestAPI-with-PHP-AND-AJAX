@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>PHP REST API CRUD</title>
+		<!-- CSS only -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row header_row">
+				<div class="col-md-8">	
+					<h1>PHP REST API CRUD</h1>
+				</div>
+				<div class="col-md-4">
+					<form method="POST" id="search_form">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Search</label>
+							<input type="text" class="form-control" id="search" >
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			
+			<form  class="row save_row" id="insert_form">
+				<div class="col-md-5">
+					<div class="form-group row">
+					    <label for="" class="col-sm-2 col-form-label">Name:</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="insert_name" name="student_name">
+					    </div>
+				 	
+				 	</div>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group row">
+					    <label for="ageId" class="col-sm-2 col-form-label pr-0">Age:</label>
+					    <div class="col-sm-2 px-0">
+					      <input type="text" class="form-control" id="insert_age" name="age">
+					    </div>
+					    <label for="cityId" class="col-sm-2 col-form-label pr-0">City:</label>
+					    <div class="col-sm-6 px-0">
+					      <input type="text" class="form-control" id="insert_city" name="city">
+					    </div>
+
+				 	
+				 	</div>
+				</div>
+				<div class="col-md-2">
+					<input type="submit" class="btn btn-success ">
+				</div>
+			</form>
+		</div>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 p-0">
+					<table class="table table-bordered text-center">
+					  <thead class="">
+					    <tr class="table-danger">
+					      <th scope="col" width="10%">Id</th>
+					      <th scope="col" width="30%">Name</th>
+					      <th scope="col" width="10%">Age</th>
+					      <th scope="col" width="20%">Ciry</th>
+					      <th scope="col" width="15%">Edit</th>
+					      <th scope="col" width="15%">Delete</th>
+					    </tr>
+					  </thead>
+					  <tbody id="table_body">
+					   <!--  <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td>22</td>
+					      <td>DDD</td>
+					      <td><form action="">
+					      	<a href="" class="btn btn-success">Edit</a>
+					      </form></td>
+					      <td>
+					      	<form action="">
+					      		<a href="" class="btn btn-danger">Delete</a>
+					      	</form>
+					      </td>
+					    </tr> -->
+					    
+					  </tbody>
+					</table>
+					<div id="error-massage" class="error"></div>
+					<div id="success-massage" class="success"></div>
+
+					
+					<!--- Modal Box Make ------->
+					<!-- rul: https://www.w3schools.com/howto/howto_css_modals.asp -->
+
+					<!-- The Modal -->
+					<div id="myModal" class="modal_make">
+
+					  <!-- Modal content -->
+					  <div class="modal_content">
+					    <span class="close">&times;</span>
+					    <h1>Edit Form</h1>
+					    <hr>
+					    <div id="modal-error-massage" class="modal-error"></div>
+						<div id="modal-success-massage" class="modal-success"></div>
+					    <form method="POST" id="edit_form">
+						  <div class="form-group">
+						    <label for="">Student Name</label>
+						    <input type="text" class="form-control" id="student_name" name="student_name" >
+						    <input type="hidden" name="id" id="student_id" >
+						  </div>
+						  <div class="form-group">
+						    <label for="">Age</label>
+						    <input type="number" class="form-control" id="age" name="age">
+						  </div>
+						   <div class="form-group">
+						    <label for="">City</label>
+						    <input type="text" class="form-control" id="city" name="city">
+						  </div>
+						  <button type="submit" class="btn btn-primary">Update</button>
+						</form>
+					   
+					  </div>
+
+					</div>
+
+
+	
+
+
+		<!-- JS, Popper.js, and jQuery -->
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery.js"></script>
+
+		<script src="js/main.js"></script>
+		
+	</body>
+</html>
